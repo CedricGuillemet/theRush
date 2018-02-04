@@ -1,0 +1,6 @@
+Name: bullet
+Description: Bullet Continuous Collision Detection and Physics Library
+Requires:
+Version: 2.78
+Libs: -L/home/mhoulier/dev/lib/bullet_2_78/lib -lBulletSoftBody -lBulletDynamics -lBulletCollision -lLinearMath
+Cflags:  -I/home/mhoulier/dev/lib/bullet_2_78/include

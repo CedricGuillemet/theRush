@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "R2", "R2.vcxproj", "{3F085DAD-34BA-4219-B4EA-3EBA85284F6D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C} = {30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssetsImport", "AssetsImport.vcxproj", "{8DF6DCBC-1C41-4ED0-817A-8792695BC3B3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GamePhysics", "sources\GamePhysics\GamePhysics.vcxproj", "{30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Retail|Win32 = Retail|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F085DAD-34BA-4219-B4EA-3EBA85284F6D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F085DAD-34BA-4219-B4EA-3EBA85284F6D}.Debug|Win32.Build.0 = Debug|Win32
+		{3F085DAD-34BA-4219-B4EA-3EBA85284F6D}.Release|Win32.ActiveCfg = Release|Win32
+		{3F085DAD-34BA-4219-B4EA-3EBA85284F6D}.Release|Win32.Build.0 = Release|Win32
+		{3F085DAD-34BA-4219-B4EA-3EBA85284F6D}.Retail|Win32.ActiveCfg = Retail|Win32
+		{3F085DAD-34BA-4219-B4EA-3EBA85284F6D}.Retail|Win32.Build.0 = Retail|Win32
+		{8DF6DCBC-1C41-4ED0-817A-8792695BC3B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8DF6DCBC-1C41-4ED0-817A-8792695BC3B3}.Debug|Win32.Build.0 = Debug|Win32
+		{8DF6DCBC-1C41-4ED0-817A-8792695BC3B3}.Release|Win32.ActiveCfg = Release|Win32
+		{8DF6DCBC-1C41-4ED0-817A-8792695BC3B3}.Retail|Win32.ActiveCfg = Release|Win32
+		{8DF6DCBC-1C41-4ED0-817A-8792695BC3B3}.Retail|Win32.Build.0 = Release|Win32
+		{30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C}.Debug|Win32.Build.0 = Debug|Win32
+		{30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C}.Release|Win32.ActiveCfg = Release|Win32
+		{30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C}.Release|Win32.Build.0 = Release|Win32
+		{30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C}.Retail|Win32.ActiveCfg = Release|Win32
+		{30DA5BE6-5FF7-4E5D-8F74-1C583F334F7C}.Retail|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

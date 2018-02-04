@@ -1,0 +1,9 @@
+Debug/*
+Release/*
+Retail/*
+ipch/*
+Bin/theRush*.*
+*.vcxproj.user
+R2.opensdf
+R2.sdf
+R2.suo

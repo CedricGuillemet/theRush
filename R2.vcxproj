@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Retail|Win32">
+      <Configuration>Retail</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3F085DAD-34BA-4219-B4EA-3EBA85284F6D}</ProjectGuid>
+    <RootNamespace>R2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Bin\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">$(SolutionDir)Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">theRush</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">theRushDebug</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">theRushRelease</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;3rdParty;3rdParty/LibGizmo\inc\;3rdParty/bullet\src\;3rdParty/SDL-1.2.15\include;3rdParty/raknet\include;3rdParty\lua5.1.5;3rdParty\OpenAL\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;__WIN32__;USE_LOG_TO_FILE=1;AL_LIBTYPE_STATIC;AL_ALEXT_PROTOTYPES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4061;4201;4365;4514;4640;4710;4820</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;GIMPACTUtils.lib;ConvexDecomposition.lib;BulletMultiThreaded.lib;OpenGLSupport.lib;BulletWorldImporter.lib;BulletSoftBody.lib;BulletDynamics.lib;BulletCollision.lib;BulletFileLoader.lib;LinearMath.lib;SDL.lib;RakNetLibStaticDebug.lib;ws2_32.lib;LibGizmoDebug.lib;OpenAL32.lib;glu32.lib;%(AdditionalDependencies);fmodex_vc.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;3rdParty\bullet\win32lib\Debug;3rdParty\SDL-1.2.15\libwin\x86;3rdParty\Raknet\LibWin32;3rdParty\LibGizmo\lib;3rdParty\OpenAL\lib;%(AdditionalLibraryDirectories);C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;3rdParty;3rdParty/LibGizmo\inc\;3rdParty/bullet\src\;3rdParty/SDL-1.2.15\include;3rdParty/raknet\include;3rdParty\lua5.1.5;3rdParty\OpenAL\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;__WIN32__;AL_LIBTYPE_STATIC;USE_LOG_TO_FILE=1;USE_PROFILER=1;AL_ALEXT_PROTOTYPES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4201;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;GIMPACTUtils.lib;ConvexDecomposition.lib;BulletMultiThreaded.lib;OpenGLSupport.lib;BulletWorldImporter.lib;BulletSoftBody.lib;BulletDynamics.lib;BulletCollision.lib;BulletFileLoader.lib;LinearMath.lib;SDL.lib;RakNetLibStatic.lib;ws2_32.lib;LibGizmo.lib;OpenAL32.lib;glu32.lib;%(AdditionalDependencies);fmodex_vc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;3rdParty\bullet\win32lib;3rdParty\SDL-1.2.15\libwin\x86;3rdParty\Raknet\LibWin32;3rdParty\LibGizmo\lib;3rdParty\OpenAL\lib;%(AdditionalLibraryDirectories);C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateMapFile>true</GenerateMapFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <MapExports>true</MapExports>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;3rdParty;3rdParty/LibGizmo\inc\;3rdParty/bullet\src\;3rdParty/SDL-1.2.15\include;3rdParty/raknet\include;3rdParty\lua5.1.5;3rdParty\OpenAL\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;__WIN32__;RETAIL;AL_ALEXT_PROTOTYPES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4201;</DisableSpecificWarnings>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;GIMPACTUtils.lib;ConvexDecomposition.lib;BulletMultiThreaded.lib;OpenGLSupport.lib;BulletWorldImporter.lib;BulletSoftBody.lib;BulletDynamics.lib;BulletCollision.lib;BulletFileLoader.lib;LinearMath.lib;SDL.lib;RakNetLibStatic.lib;ws2_32.lib;LibGizmo.lib;OpenAL32.lib;%(AdditionalDependencies);fmodex_vc.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;3rdParty\bullet\win32lib;3rdParty\SDL-1.2.15\libwin\x86;3rdParty\Raknet\LibWin32;3rdParty\LibGizmo\lib;3rdParty\OpenAL\lib;%(AdditionalLibraryDirectories);C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateMapFile>true</GenerateMapFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>rem Bin\kkrunchy_k7.exe Bin\theRush.exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="3rdParty\GLee.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">Level3</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="3rdParty\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdParty\imguiRenderGL.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3rdParty\JSON_parser.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">Level3</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="3rdParty\mongoose.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">true</ExcludedFromBuild>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">Level3</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="3rdParty\stb_vorbis.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">Level3</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="3rdParty\tinythread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level3</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">Level3</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="sources\3ds.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\3DSLoader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\audio.cpp" />
+    <ClCompile Include="sources\bonus.cpp" />
+    <ClCompile Include="sources\bulletOGL\GLDebugDrawer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\bulletOGL\GLDebugFont.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\bulletOGL\GlutDemoApplication.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\bulletOGL\GlutStuff.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\bulletOGL\GL_DialogDynamicsWorld.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\bulletOGL\GL_DialogWindow.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\bulletOGL\GL_ShapeDrawer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\bulletOGL\GL_Simplex1to4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\bulletOGL\RenderTexture.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\camera.cpp" />
+    <ClCompile Include="sources\content.cpp" />
+    <ClCompile Include="sources\core_memory.cpp" />
+    <ClCompile Include="sources\debug_assert.cpp" />
+    <ClCompile Include="sources\debug_breakpoint.cpp" />
+    <ClCompile Include="sources\debug_common.cpp" />
+    <ClCompile Include="sources\edit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sources\fx.cpp" />
+    <ClCompile Include="sources\game.cpp" />
+    <ClCompile Include="sources\gui.cpp" />
+    <ClCompile Include="sources\ImageManipulator.cpp" />
+    <ClCompile Include="sources\JSON_serializer.cpp" />
+    <ClCompile Include="sources\maths.cpp" />
+    <ClCompile Include="sources\menus.cpp" />
+    <ClCompile Include="sources\mesh.cpp" />
+    <ClCompile Include="sources\net.cpp" />
+    <ClCompile Include="sources\ocean.cpp" />
+    <ClCompile Include="sources\physics.cpp" />
+    <ClCompile Include="sources\render.cpp" />
+    <ClCompile Include="sources\solo.cpp" />
+    <ClCompile Include="sources\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sources\testunit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Retail|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sources\therush.cpp" />
+    <ClCompile Include="sources\toolbox.cpp" />
+    <ClCompile Include="sources\track.cpp" />
+    <ClCompile Include="sources\world.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdParty\GLee.h" />
+    <ClInclude Include="3rdParty\imgui.h" />
+    <ClInclude Include="3rdParty\imguiRenderGL.h" />
+    <ClInclude Include="3rdParty\JSON_parser.h" />
+    <ClInclude Include="3rdParty\mongoose.h" />
+    <ClInclude Include="3rdParty\stb_truetype.h" />
+    <ClInclude Include="3rdParty\tinythread.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="sources\3ds.h" />
+    <ClInclude Include="sources\3DSLoader.h" />
+    <ClInclude Include="sources\audio.h" />
+    <ClInclude Include="sources\bonus.h" />
+    <ClInclude Include="sources\bulletOGL\CommandLineArguments.h" />
+    <ClInclude Include="sources\bulletOGL\DebugCastResult.h" />
+    <ClInclude Include="sources\bulletOGL\GLDebugDrawer.h" />
+    <ClInclude Include="sources\bulletOGL\GLDebugFont.h" />
+    <ClInclude Include="sources\bulletOGL\GlutDemoApplication.h" />
+    <ClInclude Include="sources\bulletOGL\GlutStuff.h" />
+    <ClInclude Include="sources\bulletOGL\GL_DialogDynamicsWorld.h" />
+    <ClInclude Include="sources\bulletOGL\GL_DialogWindow.h" />
+    <ClInclude Include="sources\bulletOGL\GL_ShapeDrawer.h" />
+    <ClInclude Include="sources\bulletOGL\GL_Simplex1to4.h" />
+    <ClInclude Include="sources\bulletOGL\RenderTexture.h" />
+    <ClInclude Include="sources\camera.h" />
+    <ClInclude Include="sources\content.h" />
+    <ClInclude Include="sources\core_smartpointer.h" />
+    <ClInclude Include="sources\debug_assert.h" />
+    <ClInclude Include="sources\debug_breakpoint.h" />
+    <ClInclude Include="sources\debug_common.h" />
+    <ClInclude Include="sources\define_macros.h" />
+    <ClInclude Include="sources\define_platform.h" />
+    <ClInclude Include="sources\define_types.h" />
+    <ClInclude Include="sources\fx.h" />
+    <ClInclude Include="sources\game.h" />
+    <ClInclude Include="sources\gui.h" />
+    <ClInclude Include="sources\ImageManipulator.h" />
+    <ClInclude Include="sources\include_Bullet.h" />
+    <ClInclude Include="sources\include_GL.h" />
+    <ClInclude Include="sources\include_libGizmo.h" />
+    <ClInclude Include="sources\include_OpenAL.h" />
+    <ClInclude Include="sources\include_RakNet.h" />
+    <ClInclude Include="sources\include_SDL.h" />
+    <ClInclude Include="sources\IPhysicShip.h" />
+    <ClInclude Include="sources\JSON_serializer.h" />
+    <ClInclude Include="sources\maths.h" />
+    <ClInclude Include="sources\core_memory.h" />
+    <ClInclude Include="sources\menus.h" />
+    <ClInclude Include="sources\mesh.h" />
+    <ClInclude Include="sources\net.h" />
+    <ClInclude Include="sources\ocean.h" />
+    <ClInclude Include="sources\physics.h" />
+    <ClInclude Include="sources\render.h" />
+    <ClInclude Include="sources\solo.h" />
+    <ClInclude Include="sources\stdafx.h" />
+    <ClInclude Include="sources\therush.h" />
+    <ClInclude Include="sources\toolbox.h" />
+    <ClInclude Include="sources\track.h" />
+    <ClInclude Include="sources\world.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="therush.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TheRush.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
